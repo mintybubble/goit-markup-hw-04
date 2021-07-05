@@ -135,7 +135,6 @@ header {
   text-decoration: none;
 }
 .contacts-top .icon {
-  outline: solid 2px teal;
   margin-right: 10px;
   fill: currentColor;
 }
@@ -220,6 +219,16 @@ header {
   font-size: 14px;
   line-height: 1.71;
 }
+.feature .thumb {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
 
 /*Services*/
 
@@ -256,6 +265,7 @@ header {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  padding-bottom: 30px;
 }
 
 .name {
@@ -273,6 +283,35 @@ header {
   font-size: 16px;
   line-height: 1.19;
 }
+.team-social-platforms {
+  display: inline-flex;
+}
+.team-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.team-social-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  fill: #afb1b8;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-colour);
+  fill: var(--primary-white-colour);
+}
 
 /*Clients*/
 
@@ -282,21 +321,36 @@ header {
   justify-content: center;
 }
 .clients-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   width: 170px;
   height: 92px;
   border-radius: 4px;
-  padding: 16px 32px;
 }
 .clients-item:not(:last-child) {
   margin-right: 30px;
 }
 
+.clients-item:hover,
+.clients-item:focus {
+  fill: var(--accent-colour);
+  border-color: var(--accent-colour);
+}
 .clients-item .link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  fill: #afb1b8;
+}
+
+.clients-item .link:hover,
+.clients-item .link:focus {
+  fill: var(--accent-colour);
 }
 
 /*Footer*/
@@ -316,7 +370,7 @@ header {
   margin-right: 70px;
 }
 
-.follow .title {
+.block .title {
   text-transform: uppercase;
   color: var(--primary-white-colour);
   margin-bottom: 20px;
